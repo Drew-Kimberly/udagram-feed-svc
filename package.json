@@ -1,0 +1,46 @@
+{
+  "name": "@drewkimberly/udagram-feed-svc",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Drew Kimberly",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Drew-Kimberly/udagram-feed-svc"
+  },
+  "homepage": "https://github.com/Drew-Kimberly/udagram-feed-svc#readme",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "dependencies": {
+    "@drewkimberly/udagram-auth": "file:../udagram-auth",
+    "aws-sdk": "^2.610.0",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "pg": "^7.18.1",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": ">=5.15.1",
+    "sequelize-typescript": "^0.6.11"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.29",
+    "@types/express": "^4.17.2",
+    "@types/sequelize": "^4.28.8",
+    "@types/validator": "^10.11.3"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "start": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "build:prod": "npm run build:dev",
+    "clean": "rm -rf www/ || true",
+    "build:dev": "npm run clean && tsc && cp -rf src/config www/config && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
+    "test": "echo \"No tests implemented\" && exit 0",
+    "lint": "eslint --max-warnings 0 --ext .ts src",
+    "lint:fix": "eslint --fix --ext .ts src",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run lint && npm run typecheck"
+  }
+}
