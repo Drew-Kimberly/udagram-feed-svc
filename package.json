@@ -4,6 +4,7 @@
   "description": "",
   "author": "Drew Kimberly",
   "license": "UNLICENSED",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/Drew-Kimberly/udagram-feed-svc"
@@ -15,7 +16,7 @@
     "node": ">=8.10.0"
   },
   "dependencies": {
-    "@drewkimberly/udagram-auth": "file:../udagram-auth",
+    "@drewkimberly/udagram-auth": "^0.4.0",
     "aws-sdk": "^2.610.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
@@ -42,5 +43,6 @@
     "lint:fix": "eslint --fix --ext .ts src",
     "typecheck": "tsc --noEmit",
     "ci": "npm run lint && npm run typecheck"
-  }
+  },
+  "gitHead": "f446f1688e8b2a4fb4aad807f0647554821e2901"
 }
