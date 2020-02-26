@@ -21,8 +21,11 @@ COPY $LOCAL_PACKAGE_DIR/src ./src
 COPY $LOCAL_PACKAGE_DIR/tsconfig.json ./tsconfig.json
 COPY $LOCAL_PACKAGE_DIR/Dockerfile ./Dockerfile
 
+# Compile the app.
+RUN npm run build:prod
+
 # Expose the port
 EXPOSE 8080
 
-# Define the command that should be executed
-CMD [ "npm", "run", "start" ]
+# Start the app.
+CMD [ "node", "www/server.js" ]

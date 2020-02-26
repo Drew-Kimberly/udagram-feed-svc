@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import { sequelize } from './sequelize';
 import { IndexRouter } from './controllers/v0/index.router';
 import bodyParser from 'body-parser';
@@ -12,6 +13,7 @@ import { V0MODELS } from './controllers/v0/model.index';
   const port = process.env.UDAGRAM_FEED_SVC_PORT || process.env.PORT || 8080; // default port to listen
 
   app.use(bodyParser.json());
+  app.use(cors());
 
   app.use('/api/v0/', IndexRouter);
 
