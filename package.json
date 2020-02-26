@@ -1,6 +1,6 @@
 {
   "name": "@drewkimberly/udagram-feed-svc",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "author": "Drew Kimberly",
   "license": "UNLICENSED",
@@ -16,7 +16,7 @@
     "node": ">=8.10.0"
   },
   "dependencies": {
-    "@drewkimberly/udagram-auth": "^0.6.0",
+    "@drewkimberly/udagram-auth": "^0.7.0",
     "aws-sdk": "^2.610.0",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
