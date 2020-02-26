@@ -1,5 +1,5 @@
 # Set the base image
-FROM node:12-alpine
+FROM node:10-alpine
 
 # Define Build arguments.
 ARG LOCAL_PACKAGE_DIR=packages/udagram-feed-svc
