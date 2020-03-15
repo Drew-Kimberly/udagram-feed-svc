@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  UDAGRAM_AWS_REGION: us-east-1
+  UDAGRAM_AWS_PROFILE: default
+  UDAGRAM_DB_NAME: udagramdev
+  UDAGRAM_DB_HOST: udagramdev.cnd1isiumsu9.us-east-1.rds.amazonaws.com
+  UDAGRAM_DB_DIALECT: postgres
+  UDAGRAM_S3_BUCKET: udagram-dev-drew
+metadata:
+  name: feed-svc-env-config
