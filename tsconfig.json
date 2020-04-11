@@ -14,5 +14,5 @@
     "emitDecoratorMetadata": true,
     "outDir": "./www"
   },
-  "exclude": ["mock", "k8s"]
+  "exclude": ["mock"]
 }
